@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "repository": "neophilism/Umami-Avocado",
+  "roadmapVersion": 1,
+  "planVerified": true,
+  "plannedPrCount": 30,
+  "observedAt": "2026-10-20T19:31:48Z",
+  "units": [
+    {
+      "id": "UA-001",
+      "title": "Repository foundation and engineering standards",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [],
+      "scope": "Scaffold executable React/FastAPI/worker monorepo, local PostgreSQL/MinIO services, CI, ADRs, tests, and agent instructions",
+      "acceptance": [
+        "Local web and API smoke tests",
+        "Worker and infrastructure documented",
+        "Tests and locks reproducible"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-002",
+      "title": "Canonical API contracts and generated clients",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-001"
+      ],
+      "scope": "Canonical API contracts and generated clients",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-003",
+      "title": "Database, migrations, workspace scoping and core identities",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-002"
+      ],
+      "scope": "Database, migrations, workspace scoping and core identities",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-004",
+      "title": "Evidence registry and scientific claim review",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-003"
+      ],
+      "scope": "Evidence registry and scientific claim review",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-005",
+      "title": "Measurement ontology, units, assay and replicate semantics",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-003"
+      ],
+      "scope": "Measurement ontology, units, assay and replicate semantics",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-006",
+      "title": "Responsive research-console shell and project portfolio",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-001",
+        "UA-003"
+      ],
+      "scope": "Responsive research-console shell and project portfolio",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-007",
+      "title": "Identity, authorization, research contracts and policy engine",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-003"
+      ],
+      "scope": "Identity, authorization, research contracts and policy engine",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-008",
+      "title": "Quotes, financial ledger, reservations and spending caps",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-003",
+        "UA-007"
+      ],
+      "scope": "Quotes, financial ledger, reservations and spending caps",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-009",
+      "title": "Durable experiment orchestration and transactional outbox",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-003",
+        "UA-007",
+        "UA-008"
+      ],
+      "scope": "Durable experiment orchestration and transactional outbox",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-010",
+      "title": "Deterministic laboratory simulator and digital milestone",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-009"
+      ],
+      "scope": "Deterministic laboratory simulator and digital milestone",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-011",
+      "title": "Experiment studio, proposals, protocol versions and preflight",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-004",
+        "UA-005",
+        "UA-007"
+      ],
+      "scope": "Experiment studio, proposals, protocol versions and preflight",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-012",
+      "title": "Biological-material and sample lineage/custody graph",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-003",
+        "UA-005"
+      ],
+      "scope": "Biological-material and sample lineage/custody graph",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-013",
+      "title": "Laboratory adapter SDK and capability/contract registry",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-007",
+        "UA-009"
+      ],
+      "scope": "Laboratory adapter SDK and capability/contract registry",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-014",
+      "title": "Supervised manual CRO and secure file-exchange workflow",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-013"
+      ],
+      "scope": "Supervised manual CRO and secure file-exchange workflow",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-015",
+      "title": "Immutable laboratory artifact ingestion and provenance",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-009",
+        "UA-012"
+      ],
+      "scope": "Immutable laboratory artifact ingestion and provenance",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-016",
+      "title": "Scientific normalization, reproducibility and quality control",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-005",
+        "UA-015"
+      ],
+      "scope": "Scientific normalization, reproducibility and quality control",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-017",
+      "title": "Physical runs, timelines and exception-center UI",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-006",
+        "UA-009",
+        "UA-015"
+      ],
+      "scope": "Physical runs, timelines and exception-center UI",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-018",
+      "title": "Results explorer, comparisons and science exports",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-006",
+        "UA-016"
+      ],
+      "scope": "Results explorer, comparisons and science exports",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-019",
+      "title": "Evidence-linked research agents and constrained planning",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-004",
+        "UA-011"
+      ],
+      "scope": "Evidence-linked research agents and constrained planning",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-020",
+      "title": "Bounded optimization and next-experiment selection",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-016",
+        "UA-019"
+      ],
+      "scope": "Bounded optimization and next-experiment selection",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-021",
+      "title": "Research-agent console and reviewable execution traces",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-006",
+        "UA-019"
+      ],
+      "scope": "Research-agent console and reviewable execution traces",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-022",
+      "title": "Laboratory network, contracts and integration-status UI",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-006",
+        "UA-013"
+      ],
+      "scope": "Laboratory network, contracts and integration-status UI",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-023",
+      "title": "Approval desk, budgets, revocation and audit UI",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-006",
+        "UA-007",
+        "UA-008"
+      ],
+      "scope": "Approval desk, budgets, revocation and audit UI",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-024",
+      "title": "Yeast research modules M1 and M2",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-011",
+        "UA-016"
+      ],
+      "scope": "Yeast research modules M1 and M2",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-025",
+      "title": "Avocado transformation-partner and cultivation modules",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-011",
+        "UA-012"
+      ],
+      "scope": "Avocado transformation-partner and cultivation modules",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-026",
+      "title": "Provider failure and conformance test suite",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-013",
+        "UA-015"
+      ],
+      "scope": "Provider failure and conformance test suite",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    },
+    {
+      "id": "UA-027",
+      "title": "First contracted real-laboratory integration",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-014",
+        "UA-026"
+      ],
+      "scope": "First contracted real-laboratory integration",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": [
+        "Signed contract and a verified integration mechanism from a laboratory"
+      ]
+    },
+    {
+      "id": "UA-028",
+      "title": "First real physical research pilot",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-027",
+        "UA-016",
+        "UA-023"
+      ],
+      "scope": "First real physical research pilot",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": [
+        "Explicit scientific, financial, and biosafety approvals and real laboratory availability"
+      ]
+    },
+    {
+      "id": "UA-029",
+      "title": "Second physical round selected from previous results",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-028",
+        "UA-020"
+      ],
+      "scope": "Second physical round selected from previous results",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": [
+        "Explicit scientific, financial, and biosafety approvals and real laboratory availability"
+      ]
+    },
+    {
+      "id": "UA-030",
+      "title": "Production hardening, operational runbooks and release",
+      "origin": "original",
+      "prs": [],
+      "dependsOn": [
+        "UA-029"
+      ],
+      "scope": "Production hardening, operational runbooks and release",
+      "acceptance": [
+        "Requirements and tests specified in docs/DEVELOPMENT_PLAN.md"
+      ],
+      "externalPrerequisites": []
+    }
+  ],
+  "pullRequests": []
+}
