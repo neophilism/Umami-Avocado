@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 30,
-  "observedAt": "2026-10-22T17:18:00Z",
+  "observedAt": "2026-10-22T17:32:00Z",
   "units": [
     {
       "id": "UA-001",
@@ -20,7 +20,16 @@
         "Worker and infrastructure documented",
         "Tests and locks reproducible"
       ],
-      "externalPrerequisites": []
+      "externalPrerequisites": [],
+      "verification": [
+        {
+          "status": "verified",
+          "headSha": "791a1fb2589eb0e62a9bb02c499289acd06e7430",
+          "mergeSha": "6097de01880d7624a33bdf1f48bd6b73e5938ebc",
+          "exactHeadRun": "https://github.com/neophilism/Umami-Avocado/actions/runs/39822584955",
+          "mergedMainRun": "https://github.com/neophilism/Umami-Avocado/actions/runs/39823092194"
+        }
+      ]
     },
     {
       "id": "UA-002",
@@ -466,12 +475,12 @@
       "id": 4941797492,
       "number": 1,
       "title": "UA-001: Repository foundation and engineering standards",
-      "state": "open",
+      "state": "closed",
       "url": "https://github.com/neophilism/Umami-Avocado/pull/1",
       "createdAt": "2026-10-20T19:34:23Z",
-      "updatedAt": "2026-10-22T17:18:00Z",
-      "mergedAt": null,
-      "closedAt": null,
+      "updatedAt": "2026-10-22T17:29:04Z",
+      "mergedAt": "2026-10-22T17:29:04Z",
+      "closedAt": "2026-10-22T17:29:04Z",
       "draft": false
     }
   ]
