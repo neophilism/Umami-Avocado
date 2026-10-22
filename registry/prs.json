@@ -4,13 +4,15 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 30,
-  "observedAt": "2026-10-20T19:31:48Z",
+  "observedAt": "2026-10-22T17:18:00Z",
   "units": [
     {
       "id": "UA-001",
       "title": "Repository foundation and engineering standards",
       "origin": "original",
-      "prs": [],
+      "prs": [
+        1
+      ],
       "dependsOn": [],
       "scope": "Scaffold executable React/FastAPI/worker monorepo, local PostgreSQL/MinIO services, CI, ADRs, tests, and agent instructions",
       "acceptance": [
@@ -459,5 +461,18 @@
       "externalPrerequisites": []
     }
   ],
-  "pullRequests": []
+  "pullRequests": [
+    {
+      "id": 4941797492,
+      "number": 1,
+      "title": "UA-001: Repository foundation and engineering standards",
+      "state": "open",
+      "url": "https://github.com/neophilism/Umami-Avocado/pull/1",
+      "createdAt": "2026-10-20T19:34:23Z",
+      "updatedAt": "2026-10-22T17:18:00Z",
+      "mergedAt": null,
+      "closedAt": null,
+      "draft": false
+    }
+  ]
 }
