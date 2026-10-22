@@ -1,0 +1,64 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/validate-pr-registry.mjs
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm -r typecheck
+      - run: pnpm -r test
+      - run: pnpm -r lint
+      - run: pnpm -r build
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.10.0"
+          enable-cache: true
+          cache-dependency-glob: services/api/uv.lock
+      - run: uv sync --frozen --project services/api
+      - run: uv run --frozen --project services/api pytest services/api/tests services/worker/tests
+      - run: uv run --frozen --project services/api ruff check services
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start and verify local infrastructure
+        working-directory: infra/compose
+        run: |
+          set -euo pipefail
+          trap 'docker compose down -v' EXIT
+          if ! docker compose up -d --wait; then
+            docker compose logs
+            exit 1
+          fi
+          docker compose exec -T postgres pg_isready -U umami -d umami
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:9000/minio/health/live >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose logs minio
+          exit 1

@@ -1,0 +1,17 @@
+{
+  "name": "umami-avocado",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @umami/web dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "check:registry": "node scripts/validate-pr-registry.mjs",
+    "check:python": "uv run --project services/api pytest services/api/tests services/worker/tests"
+  }
+}

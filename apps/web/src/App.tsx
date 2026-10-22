@@ -1,0 +1,4 @@
+export const researchPrograms = ["Yeast biomass (M1)", "Yeast extract (M2)", "Avocado (A1)"] as const;
+export function App() {
+  return <main className="shell"><header><span className="eyebrow">UMAMI AVOCADO</span><span className="pill">DIGITAL FOUNDATION</span></header><h1>Research console</h1><p>AI-directed science, with verifiable physical results and human-controlled laboratory authorization.</p><section aria-label="Research programs" className="grid">{researchPrograms.map(name => <article key={name}><span className="eyebrow">PLANNED RESEARCH</span><h2>{name}</h2><p>Scientific workflows will be connected in later releases.</p></article>)}</section><p className="notice" role="status">No physical laboratory is connected. Live orders are disabled and no biological experiments have been performed.</p></main>;
+}
