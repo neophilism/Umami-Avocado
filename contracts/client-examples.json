@@ -1,0 +1,28 @@
+{
+  "health": {
+    "schema_version": "1.0",
+    "status": "ok",
+    "environment": "development",
+    "live_lab_orders_enabled": false
+  },
+  "readiness": {
+    "schema_version": "1.0",
+    "status": "foundation-only",
+    "live_lab_orders_enabled": false,
+    "database_connected": false,
+    "artifact_store_connected": false
+  },
+  "invalidHealth": [
+    null,
+    [],
+    {},
+    {"schema_version":"2.0","status":"ok","environment":"development","live_lab_orders_enabled":false},
+    {"schema_version":"1.0","status":"ready","environment":"development","live_lab_orders_enabled":false},
+    {"schema_version":"1.0","status":"ok","environment":"development","live_lab_orders_enabled":true},
+    {"schema_version":"1.0","status":"ok","environment":"development","live_lab_orders_enabled":0},
+    {"schema_version":"1.0","status":"ok","environment":"development","live_lab_orders_enabled":"false"},
+    {"schema_version":"1.0","status":"ok","environment":"","live_lab_orders_enabled":false},
+    {"schema_version":"1.0","status":"ok","environment":"invalid\n","live_lab_orders_enabled":false},
+    {"schema_version":"1.0","status":"ok","environment":"development","live_lab_orders_enabled":false,"authorization":"PHYSICAL"}
+  ]
+}

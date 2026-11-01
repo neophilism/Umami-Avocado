@@ -12,6 +12,8 @@
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "check:registry": "node scripts/validate-pr-registry.mjs",
-    "check:python": "uv run --project services/api pytest services/api/tests services/worker/tests"
+    "check:python": "uv run --project services/api pytest services/api/tests services/worker/tests",
+    "contracts:generate": "uv run --frozen --project services/api python scripts/generate-api-clients.py",
+    "contracts:check": "uv run --frozen --project services/api python scripts/generate-api-clients.py --check"
   }
 }

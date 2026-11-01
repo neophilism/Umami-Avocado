@@ -6,6 +6,13 @@ The canonical machine-readable work-unit registry is [registry/prs.json](../regi
 
 **UA-002–UA-010:** API schemas, workspace persistence, scientific claims/units, research UI, authorization, budgets, durable jobs and simulator.
 
+UA-002 implementation and review evidence: [canonical API contract](API_CONTRACT.md).
+The versioned FastAPI models, deterministic OpenAPI export, generated TypeScript
+and Python clients and drift/negative-path tests cover the existing inert health
+and readiness boundary. Database persistence, authentication and physical execution
+remain later units; generated contract artifacts are not deployment or scientific
+acceptance. Actual PR/merge observations remain in the canonical registry.
+
 **UA-011–UA-018:** experiment studio, lineage, adapter framework, supervised lab workflow, immutable artifacts, QC, run/status UI and results explorer.
 
 **UA-019–UA-025:** bounded research agents, next-round optimization, agent/provider/approval UI, yeast research modules and avocado growth tracking.
