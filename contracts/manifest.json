@@ -1,0 +1,9 @@
+{
+  "contractVersion": "1.0",
+  "generatorVersion": 1,
+  "sha256": {
+    "apps/web/src/generated/api.ts": "0c2705dd79d82f0d5019b1142f322743d47b52c9bc35abb7f15cf03094c5a694",
+    "contracts/openapi.json": "74c19a24be681ff8c1230eb058e07fa5f9d52365247ffc5fe18f22bec3b32302",
+    "services/api/umami_api/generated_client.py": "3709f9315771bafecc2f7596d50186ec9d26397603bb263fabf6eaf8fa5d4587"
+  }
+}
